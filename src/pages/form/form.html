@@ -1,0 +1,51 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Form</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<h2 ion-text color="primary">Please fill the form bellow</h2>
+	<ion-list>
+		<ion-item>
+			<ion-label floating>Name</ion-label>
+      		<ion-input type="text" [(ngModel)]="data.name"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label floating>Email</ion-label>
+      		<ion-input type="email" [(ngModel)]="data.email"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label floating>Phone</ion-label>
+      		<ion-input type="tel" [(ngModel)]="data.phone"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label floating>Pick up address</ion-label>
+      		<ion-textarea [(ngModel)]="data.pickup_address"></ion-textarea>
+		</ion-item>
+		<ion-item>
+			<ion-label floating>Delivery address</ion-label>
+      		<ion-textarea [(ngModel)]="data.delivery_address"></ion-textarea>
+		</ion-item>
+		<h4 ion-text color="primary">What you need</h4>
+		<ion-item>
+			<ion-label floating>Needs</ion-label>
+      		<ion-textarea [(ngModel)]="data.needs"></ion-textarea>
+		</ion-item>
+		<h4 ion-text color="primary">Additional delivery instructions</h4>
+		<ion-item>
+			<ion-label floating>Comments</ion-label>
+      		<ion-textarea [(ngModel)]="data.comments"></ion-textarea>
+		</ion-item>
+		<ion-item class="terms">
+		    <ion-label>Accept Terms & Conditions</ion-label>
+		    <ion-checkbox [(ngModel)]="data.terms" color="primary"></ion-checkbox>
+		</ion-item>
+		<button ion-button color="primary" block (click)="submit()">
+	      	Go Get It
+	    </button>
+	</ion-list>
+</ion-content>

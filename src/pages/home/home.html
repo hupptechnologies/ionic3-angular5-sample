@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <div class="logo">
+      <img src="assets/imgs/logo.png" />
+    </div>
+    <div class="form-section">
+        <h3 class="header_text">
+          What can we get you ?
+        </h3>
+        <div>
+            <ion-item>
+                <ion-label floating>Needs</ion-label>
+                <ion-textarea [(ngModel)]="data.needs" placeholder="" rows="2">
+                </ion-textarea>
+            </ion-item>
+            <button ion-button color="primary" block (click)="goToForm()">
+              Go Get It
+            </button>
+        </div>
+    </div>
+</ion-content>
